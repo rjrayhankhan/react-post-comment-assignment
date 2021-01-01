@@ -1,0 +1,15 @@
+.detail{
+    border: 1px solid skyblue;
+    width: 360px;
+    height: 300px;
+    float: left;
+    margin: 17px 22px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px lightgray;
+    text-align:left;
+}
+.btn{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}

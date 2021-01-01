@@ -1,0 +1,8 @@
+.allDetail{
+    margin: auto;
+    border: 1px solid lightgray;
+    width: 700px;
+    padding: 20px;
+    text-align: justify;
+    box-shadow: 5px 5px 10px lightgray;
+}
