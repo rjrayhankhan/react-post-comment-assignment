@@ -11,7 +11,7 @@ const Comment = () => {
          .then(res => res.json())
          .then(data => setDetail(data))
      }, []);
-
+     
      const detailStyle = {
          border: "1px solid lightgrey",
          padding: "15px",
