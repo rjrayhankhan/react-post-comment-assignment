@@ -11,7 +11,7 @@ const Detail = ({post}) => {
      }
     return (
         <div className="detail">
-            <h2>Post id: {id}</h2>
+            <h2>Post : {id}</h2>
             <p><span style={{fontWeight:"bold"}}>Title</span>: {title}</p>
             <p><span style={{fontWeight:"bold"}}>Description</span>: {body}</p>
             <Button onClick={() => handleClick()} variant="contained" color="primary">
