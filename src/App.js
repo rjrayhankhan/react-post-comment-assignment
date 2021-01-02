@@ -17,9 +17,6 @@ function App() {
             <Route path="/ShowDetail/:DetailId">
                 <ShowDetail></ShowDetail>
             </Route>
-            <Route path="/ShowDetail/:Comment">
-                <ShowDetail></ShowDetail>
-            </Route>
             <Route exact path="/">
                 <Data></Data>
             </Route>

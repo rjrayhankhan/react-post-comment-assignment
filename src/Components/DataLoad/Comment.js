@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Detail from './Detail';
+import { useParams } from 'react-router-dom';
 
 const Comment = () => {
-    
-    const [detail, setDetail] = useState({});
-    console.log(detail)
+    const {DetailId} = useParams();
+    const [detail, setDetail] = useState([]);
+
      useEffect(() => {
-         const url = "https://jsonplaceholder.typicode.com/comments/?postId=2"
+         const url = `https://jsonplaceholder.typicode.com/comments/?postId=${DetailId}`
          fetch(url)
          .then(res => res.json())
          .then(data => setDetail(data))
@@ -22,17 +22,16 @@ const Comment = () => {
 
     return (
         <div>
-            <h3>this is comment: {detail.length}</h3>
-                {/* {
-                    detail.map(detail => 
-                    <div style={detailStyle}>
-                        <p><span style={{fontWeight: "bold"}}>Name:</span> {detail.name}</p>
-                        <p><span style={{fontWeight: "bold"}}>Email:</span> {detail.email}</p>
-                        <p><span style={{fontWeight: "bold"}}>Comment:</span> {detail.name}</p>
-                        
-                    </div> 
-                    )
-                } */}
+            <h3>Comment: {detail.length}</h3>
+            {
+                detail.map(detail => <div style={detailStyle}>
+                    <p><span style={{fontWeight: "bold"}}>Name:</span> {detail.name}</p>
+                    <p><span style={{fontWeight: "bold"}}>Email:</span> {detail.email}</p>
+                    <p><span style={{fontWeight: "bold"}}>Comment:</span> {detail.name}</p>
+                    
+                </div> )
+            }
+                    
         </div>
     );
 };

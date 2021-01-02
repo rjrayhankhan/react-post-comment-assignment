@@ -13,13 +13,14 @@ const ShowDetail = () => {
          .then(res => res.json())
          .then(data => setDetail(data))
      }, []);
+
     return (
         <div>
-            <h1>this is detail: {DetailId}</h1>
             <div className="allDetail">
-                <p><span style={{fontWeight:"bold"}}>Title</span>: {detail.title}</p>
-                <p><span style={{fontWeight:"bold"}}>Description</span>: {detail.body}</p>
-               <Comment></Comment>
+                <p style={{fontWeight:"bold"}}>Post: {detail.id}</p>
+                <p><span style={{fontWeight:"bold"}}>Title:</span> {detail.title}</p>
+                <p><span style={{fontWeight:"bold"}}>Description:</span> {detail.body}</p>
+                <Comment></Comment>
             </div>
         </div>
     );
